@@ -24,7 +24,7 @@ const AddProductForm = ({ onCancel, onSave, products}) => {
       image,
       price,
       quantity,
-      created_at: new Date(),
+      created_at,
     };
 
     onSave(newProduct);

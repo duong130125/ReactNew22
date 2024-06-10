@@ -3,6 +3,7 @@ import './ProductList.css'
 import AddProduct from "./AddProduct";
 
 interface Products {
+    id: number
     product_name: number,
     image: string,
     price: number,
@@ -44,14 +45,14 @@ export default function ProductList() {
 
     const addProduct = async (product: Products) => {
       try {
-        await fetch('http://localhost:1301/products', { // Thay URL này bằng URL API của bạn
+        await fetch('http://localhost:1301/products', { 
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(product)
         });
-        fetchProducts(); // Cập nhật lại danh sách sản phẩm sau khi thêm mới
+        fetchProducts(); 
       } catch (error) {
         console.error('Error adding product:', error);
       }
@@ -79,7 +80,7 @@ export default function ProductList() {
             <tr>
                 <td>{index + 1}</td>
                 <td>{product.product_name}</td>
-                <td><img src={product.image} alt={product.product_name} /></td>
+                <td><img src={product.image} alt={product.product_name}/></td>
                 <td>{product.price} đ</td>
                 <td>{product.quantity}</td>
                 <td>{product.created_at}</td>
