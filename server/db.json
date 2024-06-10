@@ -31,6 +31,14 @@
       "price": 300,
       "quantity": 10,
       "created_at": "12/07/2000"
+    },
+    {
+      "id": 1717996406177,
+      "product_name": "rau củ",
+      "image": "https://mtcs.1cdn.vn/thumbs/540x360/2023/05/30/rau-cu-qua.jpg",
+      "price": "40",
+      "quantity": "25",
+      "created_at": "2024-06-01"
     }
   ]
 }

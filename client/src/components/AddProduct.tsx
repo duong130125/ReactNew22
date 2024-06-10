@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-const AddProductForm = ({ onCancel, onSave, products }) => {
-  const [name, setName] = useState('');
+const AddProductForm = ({ onCancel, onSave, products}) => {
+  const [product_name, setProduct_name] = useState('');
   const [image, setImage] = useState('');
   const [price, setPrice] = useState('');
   const [quantity, setQuantity] = useState('');
-  const [dateAdded, setDateAdded] = useState('');
+  const [created_at, setCreated_at] = useState('');
 
   const handleSave = () => {
-    if (!name || !image || !price || !quantity || !dateAdded) {
+    if (!product_name || !image || !price || !quantity || !created_at) {
       alert('Vui lòng điền đầy đủ thông tin!');
       return;
     }
@@ -20,11 +20,11 @@ const AddProductForm = ({ onCancel, onSave, products }) => {
 
     const newProduct = {
       id: Date.now(), 
-      name,
+      product_name,
       image,
       price,
       quantity,
-      dateAdded,
+      created_at: new Date(),
     };
 
     onSave(newProduct);
@@ -37,7 +37,7 @@ const AddProductForm = ({ onCancel, onSave, products }) => {
         <h2>Thêm mới sản phẩm</h2>
         <label>
           Tên sản phẩm:
-          <input type="text" value={name} onChange={e => setName(e.target.value)} />
+          <input type="text" value={product_name} onChange={e => setProduct_name(e.target.value)} />
         </label>
         <label>
           Hình ảnh:
@@ -53,7 +53,7 @@ const AddProductForm = ({ onCancel, onSave, products }) => {
         </label>
         <label>
           Ngày thêm:
-          <input type="date" value={dateAdded} onChange={e => setDateAdded(e.target.value)} />
+          <input type="date" value={created_at} onChange={e => setCreated_at(e.target.value)} />
         </label>
         <button onClick={handleSave}>Lưu</button>
         <button onClick={onCancel}>Hủy</button>

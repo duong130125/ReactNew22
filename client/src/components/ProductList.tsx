@@ -42,7 +42,7 @@ export default function ProductList() {
         .catch((error) => console.log(error));
     };
 
-    const addProduct = async (product) => {
+    const addProduct = async (product: Products) => {
       try {
         await fetch('http://localhost:1301/products', { // Thay URL này bằng URL API của bạn
           method: 'POST',
