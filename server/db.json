@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "product_name": "Oto",
+      "image": "https://img1.oto.com.vn/2023/07/14/00c6b9fe-98e0_wm.jpg",
+      "price": 200,
+      "quantity": 30,
+      "created_at": "12/01/2022"
+    },
+    {
+      "id": 2,
+      "product_name": "xe máy",
+      "image": "https://cdn.honda.com.vn/motorbikes/August2023/ysNjFYeAUAMLeWs4mu6L.png",
+      "price": 100,
+      "quantity": 15,
+      "created_at": "12/05/2010"
+    },
+    {
+      "id": 3,
+      "product_name": "xe đạp",
+      "image": "https://xedapdanang.vn/wp-content/uploads/2022/08/xe-dap-the-thao-calli-3600.jpeg",
+      "price": 50,
+      "quantity": 20,
+      "created_at": "12/09/1999"
+    },
+    {
+      "id": 4,
+      "product_name": "thuyền",
+      "image": "https://go2joy.s3.ap-southeast-1.amazonaws.com/blog/wp-content/uploads/2022/04/15095153/du-thuyen-ha-long-scarlet-pearl.jpg",
+      "price": 300,
+      "quantity": 10,
+      "created_at": "12/07/2000"
+    }
+  ]
+}
